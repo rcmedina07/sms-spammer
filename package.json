@@ -1,5 +1,5 @@
 {
-  "name": "twilio_qs",
+  "name": "sms-spammer",
   "version": "1.0.0",
   "description": "Sms spammer",
   "main": "app.js",
