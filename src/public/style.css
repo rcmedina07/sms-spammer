@@ -1,0 +1,89 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+a {
+    color: black;
+    font-weight: 300;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: white;
+}
+
+form {
+	margin-top: 80px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+ul {
+    margin-top: 0px;
+}
+
+.thumbnail img {
+    height:150px;
+    width:100%;
+}
+
+.button {
+    color: #e6e6e6;
+    background: #0a0a0a;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 110px;
+    text-align: center;
+    display: inline-block;
+    padding: 7px 0;
+    margin: 10px auto;
+}
+
+.button:hover:enabled {
+    background: linear-gradient(#1a1a1a,#0a0a0a);
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.add {
+    color: #e6e6e6;
+    background: #0a0a0a;
+    font-size: 14,5px;
+}
+
+.add:hover:enabled {
+    background: linear-gradient(#1a1a1a,#0a0a0a);
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 50px 0;
+}
+
+footer p {
+    color: rgba(255,255,255,.7);
+}
+
+footer p a {
+    color: white;
+    font-weight: 500;
+}
+

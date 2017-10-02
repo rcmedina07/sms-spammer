@@ -1,0 +1,12 @@
+{
+    "name": "SMS Spammer",
+    "description": "A web aplication con node and twilio",
+    "repository": "https://github.com/rcmedina07/Node/tree/master/sms-spammer",
+    "logo": "https://github.com/rcmedina07/Node/blob/master/sms-spammer/src/public/logo.png",
+    "keywords": [
+        "node",
+        "express",
+        "heroku"
+    ],
+    "image": "heroku/nodejs"
+}

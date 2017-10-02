@@ -1,0 +1,103 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+    <title>SMS Spammer</title>
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" id="navbar-logo" href="#page-top"><span><img src="./logo.png" alt="logo" /> SMS Spammer</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form class="col-md-6 col-md-offset-3" role="form" id="main">
+            <div class="alert alert-success alert-dismissible" id="alert-success" role="alert" hidden>
+                <button type="button" class="close" id="button-alert-success" aria-label="Close" onclick="closeAlert('alert-success')"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible" id="alert-danger" role="alert" hidden>
+                <button type="button" class="close" id="button-alert-danger" aria-label="Close" onclick="closeAlert('alert-danger')"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="form-group" id="input-Number">
+                <div class="input-group">
+                    <span class="input-group-addon">+ 598 </span>
+                    <input type="tel" class="form-control" id="number" name="number" placeholder="Phone Number" maxlength="8">
+                    <span class="input-group-btn"><button class="btn add" type="button" onclick="addNumber()">+</button> </span>
+                </div>
+                <div class="form-group" id="ulNumbers">
+                    <ul id="numbers" class="list-group"> </ul>
+                </div>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="messagesAmount">
+                  <option value="5">Amount of message for send: 5 messages.</option>
+                  <option value="15">Amount of message for send: 15 messages.</option>
+                  <option value="20">Amount of message for send: 20 messages.</option>
+                </select>
+            </div>
+            <div class="form-group" id="input-Message">
+                <textarea class="form-control" type="textarea" id="message" placeholder="Message max = 120 characteres" name="message" maxlength="120"
+                    rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://1.bp.blogspot.com/-iKtDijNEnaE/VhgOzIbYV1I/AAAAAAAADng/Bu-zh5A5wVA/s1600/0.png" alt="hearts">
+                        <div class="caption">
+                            <input type="radio" name="image" id="hearts">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://www.mercedesullod.com/wp-content/uploads/2014/06/mariposa-297x300.jpg" alt="butterfly">
+                        <div class="caption">
+                            <input type="radio" name="image" id="butterfly">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="http://www.dibujoswiki.com/Uploads/dibujoswiki.com/ImagenesGrandes/sol-sonriente-8.jpg" alt="sun">
+                        <div class="caption">
+                            <input type="radio" name="image" id="sun">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions text-center">
+                <button type="button" id="send" name="send" class="button" onclick="sendMms()">Send</button>
+                <button type="button" id="cancel" name="cancel" class="button" onclick="cancelMms()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container text-center">
+            <p>© 2017 <span><a class="page-scroll" href="#page-top">SMS Spammer</a></span>. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+    <script src="./helper.js"></script>
+</body>
+
+</html>
