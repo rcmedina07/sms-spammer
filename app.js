@@ -3,8 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mms = require('./src/twilio/sendMms');
 
-const port = process.env.PORT;
-
 const app = express();
 
 const allowCrossDomain = (req, res, next) => {
@@ -28,8 +26,12 @@ app.use(express.static(path.join(__dirname, './dist')));
 app.set('views', './src/views');
 app.engine('html', require('ejs').renderFile);
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
 app.listen(port, () => {
-    console.log("Runing");
+  console.log("Runing in port 3000");
 });
 
 app.get('/', (req, res) => res.render('index.html'));
@@ -38,7 +40,7 @@ app.post('/mms', (req, res) => {
     const { numbers, message, url, count } = req.body;
     const promisesEjecution = [];
 
-    numbers.forEach(number => {
+    numbers.forEach((number) => {
         for (let i = 0; i < count; i++) {
             promisesEjecution.push(mms.sendMms(number, message, url));
         }
